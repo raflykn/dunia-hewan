@@ -1,0 +1,129 @@
+
+{
+  "habitats": {
+    "hutan": {
+      "name": "Hutan Tropis",
+      "color": "from-green-400 to-green-600",
+      "icon": "🌳",
+      "animals": [
+        {
+          "id": "harimau",
+          "nama": "Harimau",
+          "latin": "Panthera tigris",
+          "jenis_makanan": "Karnivora",
+          "makanan": "Daging",
+          "habitat": "Hutan Tropis",
+          "emoji": "🐅",
+          "suara": "Grrraawww!",
+          "ciri": "Belang hitam dan orange, cakar tajam",
+          "fakta": "Harimau adalah kucing terbesar di dunia"
+        },
+        {
+          "id": "orangutan",
+          "nama": "Orangutan",
+          "latin": "Pongo pygmaeus",
+          "jenis_makanan": "Omnivora",
+          "makanan": "Buah dan dedaunan",
+          "habitat": "Hutan Tropis",
+          "emoji": "🦧",
+          "suara": "Oook ook!",
+          "ciri": "Bulu coklat kemerahan, lengan panjang",
+          "fakta": "Orangutan sangat pintar dan bisa menggunakan alat"
+        }
+      ]
+    },
+    "laut": {
+      "name": "Laut",
+      "color": "from-blue-400 to-blue-600",
+      "icon": "🌊",
+      "animals": [
+        {
+          "id": "lumba-lumba",
+          "nama": "Lumba-lumba",
+          "latin": "Delphinus delphis",
+          "jenis_makanan": "Karnivora",
+          "makanan": "Ikan",
+          "habitat": "Laut",
+          "emoji": "🐬",
+          "suara": "Click click!",
+          "ciri": "Tubuh streamline, paruh panjang",
+          "fakta": "Lumba-lumba sangat cerdas dan suka bermain"
+        },
+        {
+          "id": "hiu",
+          "nama": "Hiu",
+          "latin": "Carcharodon carcharias",
+          "jenis_makanan": "Karnivora",
+          "makanan": "Ikan dan daging laut",
+          "habitat": "Laut",
+          "emoji": "🦈",
+          "suara": "Splash!",
+          "ciri": "Gigi tajam, sirip segitiga",
+          "fakta": "Hiu sudah ada sejak 400 juta tahun lalu"
+        }
+      ]
+    },
+    "savana": {
+      "name": "Savana",
+      "color": "from-yellow-400 to-orange-500",
+      "icon": "🌾",
+      "animals": [
+        {
+          "id": "singa",
+          "nama": "Singa",
+          "latin": "Panthera leo",
+          "jenis_makanan": "Karnivora",
+          "makanan": "Daging",
+          "habitat": "Savana",
+          "emoji": "🦁",
+          "suara": "Roaaaar!",
+          "ciri": "Surai pada jantan, cakar kuat",
+          "fakta": "Singa adalah raja hutan dan hidup berkelompok"
+        },
+        {
+          "id": "zebra",
+          "nama": "Zebra",
+          "latin": "Equus zebra",
+          "jenis_makanan": "Herbivora",
+          "makanan": "Rumput",
+          "habitat": "Savana",
+          "emoji": "🦓",
+          "suara": "Neigh neigh!",
+          "ciri": "Belang hitam putih di seluruh tubuh",
+          "fakta": "Setiap zebra memiliki pola belang yang unik"
+        }
+      ]
+    },
+    "kutub": {
+      "name": "Kutub",
+      "color": "from-cyan-300 to-blue-400",
+      "icon": "❄️",
+      "animals": [
+        {
+          "id": "beruang-kutub",
+          "nama": "Beruang Kutub",
+          "latin": "Ursus maritimus",
+          "jenis_makanan": "Karnivora",
+          "makanan": "Ikan dan anjing laut",
+          "habitat": "Kutub",
+          "emoji": "🐻‍❄️",
+          "suara": "Grrrr!",
+          "ciri": "Bulu putih tebal, cakar besar",
+          "fakta": "Beruang kutub adalah perenang yang hebat"
+        },
+        {
+          "id": "pinguin",
+          "nama": "Pinguin",
+          "latin": "Spheniscidae",
+          "jenis_makanan": "Karnivora",
+          "makanan": "Ikan",
+          "habitat": "Kutub",
+          "emoji": "🐧",
+          "suara": "Squawk squawk!",
+          "ciri": "Hitam putih, kaki berselaput",
+          "fakta": "Pinguin tidak bisa terbang tapi sangat pandai berenang"
+        }
+      ]
+    }
+  }
+}

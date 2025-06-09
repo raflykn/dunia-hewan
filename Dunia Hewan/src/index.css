@@ -1,0 +1,291 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%; 
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Comic Neue', 'Fredoka', cursive, sans-serif;
+  }
+}
+
+/* Game-style animations */
+@keyframes bounce-gentle {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -10px, 0);
+  }
+  70% {
+    transform: translate3d(0, -5px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1) rotate(0deg);
+  }
+  25% { 
+    opacity: 0.8; 
+    transform: scale(1.1) rotate(90deg);
+  }
+  50% { 
+    opacity: 0.6; 
+    transform: scale(1.2) rotate(180deg);
+  }
+  75% { 
+    opacity: 0.8; 
+    transform: scale(1.1) rotate(270deg);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes pixelPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-pixel-pop {
+  animation: pixelPop 0.3s ease-out;
+}
+
+/* Game-style button effects */
+.btn-game {
+  @apply relative overflow-hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-game:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-game:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-game::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-game:hover::before {
+  left: 100%;
+}
+
+/* Minecraft-style pixelated borders */
+.pixel-border {
+  border-image: 
+    linear-gradient(45deg, #8B4513 25%, transparent 25%), 
+    linear-gradient(-45deg, #8B4513 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #8B4513 75%), 
+    linear-gradient(-45deg, transparent 75%, #8B4513 75%);
+  border-image-slice: 20;
+  border-image-width: 4px;
+  border-image-outset: 0;
+  border-image-repeat: repeat;
+}
+
+/* FarmVille-style card effects */
+.card-farmville {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 15px;
+  box-shadow: 
+    inset 5px 5px 15px #d9d9d9,
+    inset -5px -5px 15px #ffffff,
+    0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-farmville:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    inset 5px 5px 15px #d9d9d9,
+    inset -5px -5px 15px #ffffff,
+    0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Inventory bar style */
+.inventory-slot {
+  @apply w-12 h-12 bg-gray-700 border-2 border-gray-600 rounded flex items-center justify-center;
+  background-image: 
+    radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0),
+    radial-gradient(circle at 10px 10px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 12px 12px;
+}
+
+.inventory-slot:hover {
+  @apply border-yellow-400 bg-gray-600;
+  box-shadow: inset 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Game progress bar */
+.progress-game {
+  background: linear-gradient(90deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+  border-radius: 10px;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(34, 197, 94, 0.3);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Responsive game UI */
+@media (max-width: 640px) {
+  .mobile-game-padding {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .mobile-game-text {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-game-title {
+    font-size: 1.25rem;
+  }
+  
+  .inventory-slot {
+    @apply w-10 h-10;
+  }
+}
+
+/* Achievement popup */
+.achievement-popup {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  border: 3px solid #d97706;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: pixelPop 0.6s ease-out, glow 1s ease-in-out 0.6s;
+}
